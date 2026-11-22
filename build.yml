@@ -1,0 +1,20 @@
+name: Build PS2 ISO
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: ps2dev/ps2dev:latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Instalar herramientas ISO
+        run: apk add --no-cache cdrkit make
+      - name: Compilar y crear ISO
+        run: sh build_iso.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ChickenGunPS2
+          path: |
+            ChickenGunPS2.iso
+            CHICKEN.ELF

@@ -1,0 +1,4 @@
+Chicken Gun PS2 v4
+1) Sube TODOS los archivos de esta carpeta (planos, sin carpetas) al repositorio de GitHub, reemplazando los anteriores.
+2) Borra del repositorio los archivos viejos que ya no existen: map_dust2.c, map_proto07.c, map_house.c.
+3) Espera a que Actions termine y descarga el ISO.
